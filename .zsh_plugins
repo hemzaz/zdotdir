@@ -41,28 +41,28 @@ ohmyzsh/ohmyzsh path:plugins/colored-man-pages
 # sorin-ionescu/prezto path:modules/terminal
 
 # my goodies
-$ZSH_CUSTOM/plugins/aliases
-$ZSH_CUSTOM/plugins/brew
-$ZSH_CUSTOM/plugins/cd-ls
-$ZSH_CUSTOM/plugins/dotfiles
-$ZSH_CUSTOM/plugins/git
-$ZSH_CUSTOM/plugins/golang
-$ZSH_CUSTOM/plugins/groovy
-$ZSH_CUSTOM/plugins/iwd
-$ZSH_CUSTOM/plugins/java
-$ZSH_CUSTOM/plugins/jupyter
-$ZSH_CUSTOM/plugins/lpass
-$ZSH_CUSTOM/plugins/osx
-$ZSH_CUSTOM/plugins/python
-$ZSH_CUSTOM/plugins/ruby
-$ZSH_CUSTOM/plugins/safe-rm
-$ZSH_CUSTOM/plugins/shrink-path
-$ZSH_CUSTOM/plugins/tmux
-$ZSH_CUSTOM/plugins/todo-txt
-$ZSH_CUSTOM/plugins/up
-$ZSH_CUSTOM/plugins/vscode
-$ZSH_CUSTOM/plugins/zfunctions
-$ZSH_CUSTOM/plugins/z
+# $ZSH_CUSTOM/plugins/aliases
+# $ZSH_CUSTOM/plugins/brew
+# $ZSH_CUSTOM/plugins/cd-ls
+# $ZSH_CUSTOM/plugins/dotfiles
+# $ZSH_CUSTOM/plugins/git
+# $ZSH_CUSTOM/plugins/golang
+# $ZSH_CUSTOM/plugins/groovy
+# $ZSH_CUSTOM/plugins/iwd
+# $ZSH_CUSTOM/plugins/java
+# $ZSH_CUSTOM/plugins/jupyter
+# $ZSH_CUSTOM/plugins/lpass
+# $ZSH_CUSTOM/plugins/osx
+# $ZSH_CUSTOM/plugins/python
+# $ZSH_CUSTOM/plugins/ruby
+# $ZSH_CUSTOM/plugins/safe-rm
+# $ZSH_CUSTOM/plugins/shrink-path
+# $ZSH_CUSTOM/plugins/tmux
+# $ZSH_CUSTOM/plugins/todo-txt
+# $ZSH_CUSTOM/plugins/up
+# $ZSH_CUSTOM/plugins/vscode
+# $ZSH_CUSTOM/plugins/zfunctions
+# $ZSH_CUSTOM/plugins/z
 
 # features
 # peterhurford/up.zsh
