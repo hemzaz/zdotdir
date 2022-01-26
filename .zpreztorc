@@ -56,7 +56,7 @@ mymodules=(
   jupyter
   lpass
   macos
-  nodejs
+  node
   prj
   pure
   python
