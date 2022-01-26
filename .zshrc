@@ -3,11 +3,14 @@
 alias zprofrc="ZPROFRC=1 zsh"
 
 # prezto
-[[ -d $ZDOTDIR/.zprezto ]] ||
-  git clone --recursive https://github.com/sorin-ionescu/prezto.git $ZDOTDIR/.zprezto
-[[ -d $ZDOTDIR/.zprezto-contrib ]] ||
-  git clone --recursive git@github.com:mattmc3/prezto-contrib $ZDOTDIR/.zprezto-contrib
-source $ZDOTDIR/.zprezto/init.zsh
+ZCONTRIBDIR=$ZDOTDIR/.zprezto-contrib
+ZPREZTODIR=$ZDOTDIR/.zprezto
+[[ -d $ZCONTRIBDIR ]] ||
+  git clone --recursive git@github.com:mattmc3/prezto-contrib $ZCONTRIBDIR
+[[ -d $ZPREZTODIR ]] ||
+  git clone --recursive https://github.com/sorin-ionescu/prezto.git $ZPREZTODIR
+source $ZCONTRIBDIR/init.zsh
+source $ZPREZTODIR/init.zsh
 
 # done profiling
 [[ ${ZPROFRC:-0} -eq 0 ]] || { unset ZPROFRC && zprof }
