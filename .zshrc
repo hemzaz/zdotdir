@@ -12,5 +12,9 @@ ZPREZTODIR=$ZDOTDIR/.zprezto
 source $ZCONTRIBDIR/init.zsh
 source $ZPREZTODIR/init.zsh
 
+# local settings
+[[ -f $ZDOTDIR/.zshrc.local ]] && . $ZDOTDIR/.zshrc.local
+[[ -f $ZDOTDIR/functions.local ]] && autoload-dir $ZDOTDIR/functions.local
+
 # done profiling
 [[ ${ZPROFRC:-0} -eq 0 ]] || { unset ZPROFRC && zprof }
