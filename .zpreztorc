@@ -23,7 +23,7 @@ zstyle ':prezto:load' pmodule-allow-overrides 'yes'
 
 # Set the Prezto modules to load (browse modules).
 # The order matters.
-mymodules=(
+prezto_modules=(
   # zprezto built-ins
   autosuggestions
   environment
@@ -32,11 +32,10 @@ mymodules=(
   directory
   spectrum
   utility
-  completion
   history-substring-search
-  # prompt
+  prompt
 
-  # zprezto-contribs
+  # my zprezto-contribs
   zsh-defer
   xdg-basedirs
   abbreviations
@@ -56,19 +55,24 @@ mymodules=(
   jupyter
   lpass
   macos
+  magic-enter
   node
   prj
-  pure
   python
   readline
   ruby
+  string
   tmux
   todo-txt
   z
   zfunctions
+  zsh-bench
+
+  # load this last
+  completion
   fast-syntax-highlighting
 )
-zstyle ':prezto:load' pmodule $mymodules
+zstyle ':prezto:load' pmodule $prezto_modules
 
 
 #
@@ -148,7 +152,7 @@ zstyle ':prezto:module:git:alias' skip 'yes'
 # Set the prompt theme to load.
 # Setting it to 'random' loads a random theme.
 # Auto set to 'off' on dumb terminals.
-zstyle ':prezto:module:prompt' theme 'sorin'
+zstyle ':prezto:module:prompt' theme 'purell'
 
 # Set the working directory prompt display length.
 # By default, it is set to 'short'. Set it to 'long' (without '~' expansion)
