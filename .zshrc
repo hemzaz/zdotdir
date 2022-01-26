@@ -2,14 +2,12 @@
 [[ ${ZPROFRC:-0} -eq 0 ]] || zmodload zsh/zprof
 alias zprofrc="ZPROFRC=1 zsh"
 
-# source everything from conf.d
-() {
-  local f
-  for f in $ZDOTDIR/zshrc.d/*.zsh(N); do
-    [[ ${f:t} != '~'* ]] || continue
-    source "$f"
-  done
-}
+# prezto
+[[ -d $ZDOTDIR/.zprezto ]] ||
+  git clone --recursive https://github.com/sorin-ionescu/prezto.git $ZDOTDIR/.zprezto
+[[ -d $ZDOTDIR/.zprezto-contrib ]] ||
+  git clone --recursive git@github.com:mattmc3/prezto-contrib $ZDOTDIR/.zprezto-contrib
+source $ZDOTDIR/.zprezto/init.zsh
 
 # done profiling
 [[ ${ZPROFRC:-0} -eq 0 ]] || { unset ZPROFRC && zprof }

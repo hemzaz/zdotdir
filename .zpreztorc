@@ -9,8 +9,8 @@
 zstyle ':prezto:*:*' color 'yes'
 
 # Add additional directories to load prezto modules from
-# zstyle ':prezto:load' pmodule-dirs $HOME/.zprezto-contrib
-zstyle ':prezto:load' pmodule-dirs $ZDOTDIR/.zplugins
+zstyle ':prezto:load' pmodule-dirs $ZDOTDIR/.zprezto-contrib
+# zstyle ':prezto:load' pmodule-dirs $ZDOTDIR/.zplugins
 
 # Allow module overrides when pmodule-dirs causes module name collisions
 zstyle ':prezto:load' pmodule-allow-overrides 'yes'
@@ -24,20 +24,49 @@ zstyle ':prezto:load' pmodule-allow-overrides 'yes'
 # Set the Prezto modules to load (browse modules).
 # The order matters.
 mymodules=(
+  # zprezto built-ins
   autosuggestions
   environment
   terminal
   editor
-  history
   directory
   spectrum
   utility
   completion
   history-substring-search
   # prompt
+
+  # zprezto-contribs
+  zsh-defer
+  xdg-basedirs
+  abbreviations
+  colored-man-pages
+  common-aliases
+  curl
+  dotfiles
   emacs
   git
-  osx
+  golang
+  gpg
+  groovy
+  history
+  homebrew
+  iwd
+  java
+  jupyter
+  lpass
+  macos
+  nodejs
+  prj
+  pure
+  python
+  readline
+  ruby
+  tmux
+  todo-txt
+  z
+  zfunctions
+  fast-syntax-highlighting
 )
 zstyle ':prezto:load' pmodule $mymodules
 
