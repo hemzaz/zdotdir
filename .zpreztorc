@@ -36,11 +36,9 @@ prezto_modules=(
   prompt
 
   # my zprezto-contribs
-  zsh-defer
   xdg-basedirs
-  abbreviations
+  aliases
   colored-man-pages
-  common-aliases
   curl
   dotfiles
   emacs
@@ -55,22 +53,18 @@ prezto_modules=(
   jupyter
   lpass
   macos
-  magic-enter
   node
-  prj
   python
   readline
   ruby
   string
   tmux
   todo-txt
-  z
-  zfunctions
-  zsh-bench
+  zopts
 
   # load this last
   completion
-  fast-syntax-highlighting
+  #fast-syntax-highlighting
 )
 zstyle ':prezto:load' pmodule $prezto_modules
 

@@ -1,0 +1,25 @@
+# clone only plugins
+mbadolato/iTerm2-Color-Schemes kind:clone
+olets/zsh-abbr kind:clone
+
+# path only plugins
+romkatv/zsh-bench kind:path
+
+# omz plugins
+ohmyzsh/ohmyzsh path:plugins/extract
+ohmyzsh/ohmyzsh path:lib/clipboard.zsh
+ohmyzsh/ohmyzsh path:plugins/copydir
+ohmyzsh/ohmyzsh path:plugins/copybuffer
+ohmyzsh/ohmyzsh path:plugins/copyfile
+ohmyzsh/ohmyzsh path:plugins/macos
+ohmyzsh/ohmyzsh path:plugins/magic-enter
+
+# other plugins
+zshzoo/zfunctions
+romkatv/zsh-defer
+peterhurford/up.zsh
+rummik/zsh-tailf
+mattmc3/zman
+zshzoo/prj
+mattmc3/zsh-safe-rm
+zdharma-continuum/fast-syntax-highlighting
