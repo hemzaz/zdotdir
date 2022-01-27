@@ -22,6 +22,7 @@ source $ZCONTRIBDIR/init.zsh
 source $ZPREZTODIR/init.zsh
 
 # plugins
+ZPLUGINDIR=$ZDOTDIR/.zplugins
 plugin loadall
 MAGIC_ENTER_GIT_COMMAND="git status -sb"
 MAGIC_ENTER_OTHER_COMMAND="ls -G"

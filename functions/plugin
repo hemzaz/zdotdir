@@ -1,8 +1,9 @@
 #!/usr/bin/env zsh
 #
 # plugin
+#
 # A simple antibody replacement: https://getantibody.github.io/
-# plugin bundle < ${ZDOTDIR:-~}/.zsh_plugins.txt >| ${ZDOTDIR:-~}/.zsh_plugins.zsh
+# plugin bundle < ${ZDOTDIR:-~}/.zpluginrc >| $ZPLUGINDIR/init.zsh
 #
 
 ZPLUGINDIR=${ZPLUGINDIR:-${ZDOTDIR:-$HOME}/.zplugins}
@@ -161,11 +162,14 @@ function _plugin-bundle() {
 }
 
 function _plugin-loadall() {
-  if [[ ! -f $ZPLUGINDIR/init.zsh ]]; then
-    mkdir -p $ZPLUGINDIR
-    plugin bundle < ${ZDOTDIR:-~}/.zsh_plugins >| $ZPLUGINDIR/init.zsh
-  fi
-  source $ZPLUGINDIR/init.zsh
+  local plugin_init=$ZPLUGINDIR/init.zsh
+  [[ -f $plugin_init ]] || _plugin-regenerate
+  source $plugin_init
+}
+
+function _plugin-regenerate() {
+  mkdir -p $ZPLUGINDIR
+  plugin bundle < ${ZDOTDIR:-~}/.zpluginrc >| $ZPLUGINDIR/init.zsh
 }
 
 function _plugin() {
