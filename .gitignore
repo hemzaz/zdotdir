@@ -11,24 +11,6 @@
 *.zwc
 *.zwc.old
 *history
-<<<<<<< HEAD
-zplugins/
-.zprezto/
-.antibody/
-.zcompcache/
-.zsh_sessions/
-.ohmyzsh/
-.oh-my-zsh/
-.zsh_custom/
-plugins/
-!functions/plugins
-!*functions/plugins
-!**/archive/**/plugins
-.zplugins/
-.zprezto-contrib/
-*.local.zsh
-=======
->>>>>>> cbcc9d6 (Organize gitignore)
 foo.*
 
 # plugins
