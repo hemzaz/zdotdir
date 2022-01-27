@@ -13,7 +13,6 @@ source $ZCONTRIBDIR/init.zsh
 source $ZPREZTODIR/init.zsh
 
 # plugins
-ZPLUGINDIR=$ZDOTDIR/.zplugins
 ABBR_USER_ABBREVIATIONS_FILE=$ZDOTDIR/.zabbrs
 MAGIC_ENTER_GIT_COMMAND="git status -sb"
 MAGIC_ENTER_OTHER_COMMAND="ls -G"

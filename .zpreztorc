@@ -67,9 +67,9 @@ prezto_modules=(
   zfunctions
   zopts
 
-  # load this last
+  # load these last
   completion
-  #fast-syntax-highlighting
+  plugins
 )
 zstyle ':prezto:load' pmodule $prezto_modules
 
