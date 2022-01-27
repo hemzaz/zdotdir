@@ -51,15 +51,20 @@ prezto_modules=(
   iwd
   java
   jupyter
+  less
   lpass
   macos
   node
+  nuget
   python
   readline
   ruby
+  rust
   string
   tmux
   todo-txt
+  wget
+  zfunctions
   zopts
 
   # load this last

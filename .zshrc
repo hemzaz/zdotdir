@@ -1,15 +1,6 @@
-# load zprof first if we need to profile
+# zprof comes first in case we need to profile
 [[ ${ZPROFRC:-0} -eq 0 ]] || zmodload zsh/zprof
 alias zprofrc="ZPROFRC=1 zsh"
-
-# functions
-() {
-  fpath+="$ZDOTDIR/functions"
-  local fn
-  for fn in $ZDOTDIR/functions/**/*(.N); do
-    autoload -Uz "$fn"
-  done
-}
 
 # prezto
 ZCONTRIBDIR=$ZDOTDIR/.zprezto-contrib
@@ -23,9 +14,10 @@ source $ZPREZTODIR/init.zsh
 
 # plugins
 ZPLUGINDIR=$ZDOTDIR/.zplugins
-plugin loadall
+ABBR_USER_ABBREVIATIONS_FILE=$ZDOTDIR/.zabbrs
 MAGIC_ENTER_GIT_COMMAND="git status -sb"
 MAGIC_ENTER_OTHER_COMMAND="ls -G"
+plugin loadall
 
 # local settings
 [[ -f $ZDOTDIR/.zshrc.local ]] && . $ZDOTDIR/.zshrc.local

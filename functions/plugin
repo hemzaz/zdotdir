@@ -156,7 +156,11 @@ function _plugin-bundle() {
       __plugin_initfile $plugin &>/dev/null
       [[ $? -eq 0 ]] || { echo "# ERROR: plugin init file not found '$plugin'." && continue }
       echo "fpath+=( $plugin )"
-      echo "source $plugin/${plugin:t}.plugin.zsh"
+      if (( $instructions[(Ie)kind:defer] )); then
+        echo "zsh-defer source $plugin/${plugin:t}.plugin.zsh"
+      else
+        echo "source $plugin/${plugin:t}.plugin.zsh"
+      fi
     fi
   done
 }

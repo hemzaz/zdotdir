@@ -1,9 +1,14 @@
+# first plugins
+romkatv/zsh-defer
+
 # clone only plugins
 mbadolato/iTerm2-Color-Schemes kind:clone
-olets/zsh-abbr kind:clone
 
 # path only plugins
 romkatv/zsh-bench kind:path
+
+# defered plugins
+olets/zsh-abbr kind:defer
 
 # omz plugins
 ohmyzsh/ohmyzsh path:plugins/extract
@@ -14,12 +19,12 @@ ohmyzsh/ohmyzsh path:plugins/copyfile
 ohmyzsh/ohmyzsh path:plugins/macos
 ohmyzsh/ohmyzsh path:plugins/magic-enter
 
-# other plugins
-zshzoo/zfunctions
-romkatv/zsh-defer
+# general plugins
 peterhurford/up.zsh
 rummik/zsh-tailf
 mattmc3/zman
 zshzoo/prj
 mattmc3/zsh-safe-rm
+
+# last plugins
 zdharma-continuum/fast-syntax-highlighting
