@@ -1,15 +1,17 @@
 ~*
 .*history
-.antigen
 .cache
+.zcompcache/
 .zcompdump*
 .zdirs
-.zgen
+.zsh_sessions/
 *.bak
 *.local
+*.local.zsh
 *.zwc
 *.zwc.old
 *history
+<<<<<<< HEAD
 zplugins/
 .zprezto/
 .antibody/
@@ -25,6 +27,24 @@ plugins/
 .zplugins/
 .zprezto-contrib/
 *.local.zsh
+=======
+>>>>>>> cbcc9d6 (Organize gitignore)
 foo.*
+
+# plugins
+.antibody/
+.antigen
+.zgen
+.zplugins
+.zplugins/
 .zsh_plugins.zsh
-!archive/functions/plugins
+plugins/
+zplugins/
+
+# frameworks
+.oh-my-zsh/
+.ohmyzsh/
+.omz/
+.zprezto-contrib/
+.zprezto/
+.zsh_custom/
