@@ -18,7 +18,7 @@ trim_trailing_whitespace = false
 indent_style = space
 indent_size = 2
 
-[.{zsh*,zlogin}]
+[.{zsh*,zlogin,zpreztorc}]
 indent_style = space
 indent_size = 2
 
