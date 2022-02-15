@@ -6,9 +6,10 @@ alias zprofrc="ZPROFRC=1 zsh"
 ZCONTRIBDIR=$ZDOTDIR/.zprezto-contrib
 ZPREZTODIR=$ZDOTDIR/.zprezto
 [[ -d $ZCONTRIBDIR ]] ||
-  git clone --recursive git@github.com:mattmc3/prezto-contrib $ZCONTRIBDIR
+  git clone git@github.com:mattmc3/prezto-contrib $ZCONTRIBDIR
 [[ -d $ZPREZTODIR ]] ||
-  git clone --recursive https://github.com/sorin-ionescu/prezto.git $ZPREZTODIR
+  git clone --depth 1 --quiet --recurse-submodules --shallow-submodules https://github.com/sorin-ionescu/prezto $ZPREZTODIR
+
 source $ZCONTRIBDIR/init.zsh
 source $ZPREZTODIR/init.zsh
 

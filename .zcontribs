@@ -1,0 +1,11 @@
+# you can add 3rd party plugins here, but that just makes them available
+# to enable them, use .zpreztorc
+
+peterhurford/up.zsh
+rummik/zsh-tailf
+joshskidmore/zsh-fzf-history-search
+rupa/z
+zdharma-continuum/fast-syntax-highlighting
+
+# my plugins
+mattmc3/zman

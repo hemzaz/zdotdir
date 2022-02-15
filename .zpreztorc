@@ -34,6 +34,7 @@ zstyle ':omz:load' plugins \
 
 prezto_modules=(
   # initial
+  contribs
   prezto-patches
 
   # zprezto built-ins
@@ -45,7 +46,7 @@ prezto_modules=(
   spectrum
   utility
   history-substring-search
-  #prompt
+  prompt
 
   # my zprezto-contribs
   xdg-basedirs
@@ -78,16 +79,20 @@ prezto_modules=(
   string
   tmux
   todo-txt
-  up
   wget
   zfunctions
-  zman
   zsh-bench
   zopts
+
+  # 3rd party plugin/contribs
+  up.zsh
+  zsh-tailf
+  zsh-fzf-history-search
   z
+  zman
 
   # load these last
-  pure
+  #pure
   completion
   ohmyzsh
   fast-syntax-highlighting
@@ -172,7 +177,7 @@ zstyle ':prezto:module:git:alias' skip 'yes'
 # Set the prompt theme to load.
 # Setting it to 'random' loads a random theme.
 # Auto set to 'off' on dumb terminals.
-zstyle ':prezto:module:prompt' theme 'purell'
+zstyle ':prezto:module:prompt' theme 'pure'
 
 # Set the working directory prompt display length.
 # By default, it is set to 'short'. Set it to 'long' (without '~' expansion)
