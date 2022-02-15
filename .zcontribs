@@ -1,9 +1,14 @@
-# you can add 3rd party plugins here, but that just makes them available
-# to enable them, use .zpreztorc
+# add git repo contribs here, but that just makes them available
+# to enable them, you still use .zpreztorc
 
-peterhurford/up.zsh
-rummik/zsh-tailf
+# 3rd party plugins
 joshskidmore/zsh-fzf-history-search
+olets/zsh-abbr
+ohmyzsh/ohmyzsh
+peterhurford/up.zsh
+romkatv/zsh-bench
+romkatv/zsh-defer
+rummik/zsh-tailf
 rupa/z
 zdharma-continuum/fast-syntax-highlighting
 
