@@ -23,6 +23,15 @@ zstyle ':prezto:load' pmodule-allow-overrides 'yes'
 
 # Set the Prezto modules to load (browse modules).
 # The order matters.
+zstyle ':omz:load' plugins \
+  'extract' \
+  'lib/clipboard' \
+  'copydir' \
+  'copybuffer' \
+  'copyfile' \
+  'macos' \
+  'magic-enter'
+
 prezto_modules=(
   # initial
   prezto-patches
@@ -40,6 +49,7 @@ prezto_modules=(
 
   # my zprezto-contribs
   xdg-basedirs
+  abbreviations
   aliases
   colored-man-pages
   curl
@@ -59,21 +69,28 @@ prezto_modules=(
   macos
   node
   nuget
+  prj
   python
   readline
   ruby
   rust
+  shell-safe-rm
   string
   tmux
   todo-txt
+  up
   wget
   zfunctions
+  zman
+  zsh-bench
   zopts
+  z
 
   # load these last
   pure
   completion
-  plugins
+  ohmyzsh
+  fast-syntax-highlighting
 )
 zstyle ':prezto:load' pmodule $prezto_modules
 

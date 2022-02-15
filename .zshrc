@@ -12,12 +12,6 @@ ZPREZTODIR=$ZDOTDIR/.zprezto
 source $ZCONTRIBDIR/init.zsh
 source $ZPREZTODIR/init.zsh
 
-# plugins
-ABBR_USER_ABBREVIATIONS_FILE=$ZDOTDIR/.zabbrs
-MAGIC_ENTER_GIT_COMMAND="git status -sb"
-MAGIC_ENTER_OTHER_COMMAND="ls -G"
-plugin loadall
-
 # local settings
 [[ -f $ZDOTDIR/.zshrc.local ]] && . $ZDOTDIR/.zshrc.local
 [[ -f $ZDOTDIR/functions.local ]] && autoload-dir $ZDOTDIR/functions.local
