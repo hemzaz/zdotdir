@@ -2,6 +2,15 @@
 
 My $ZDOTDIR directory, which contains my zsh configuration.
 
+## NOTE:
+
+Antibody has been [deprecated][antibody-deprecated]. After a year of not having anything
+I felt properly filled the void, I developed [Antidote](https://getantidote.github.io).
+Antidote is a drop in replacement for Antibody (`s/antibody/antidote/g`). Your
+`.zsh_plugins.zsh` will work the same. Enjoy!
+
+---
+
 ## Installation
 
 ```zsh
@@ -76,8 +85,9 @@ The latest benchmark run shows that we load a new shell pretty fast.
 - [oh-my-zsh][omz]
 - [supercharge your terminal with zsh][supercharge-zsh]
 
-[antibody]:        https://getantibody.github.io/
-[supercharge-zsh]: https://blog.callstack.io/supercharge-your-terminal-with-zsh-8b369d689770
-[omz]:             https://github.com/robbyrussell/oh-my-zsh/tree/master/lib
-[terminal-font]:   https://github.com/powerline/fonts
-[zgen]:            https://github.com/tarjoilija/zgen
+[antibody]:             https://getantibody.github.io/
+[antibody-deprecated]:  https://github.com/getantibody/antibody/tree/2ca7616ae78754c0ab70790229f5d19be42206e9
+[supercharge-zsh]:      https://blog.callstack.io/supercharge-your-terminal-with-zsh-8b369d689770
+[omz]:                  https://github.com/robbyrussell/oh-my-zsh/tree/master/lib
+[terminal-font]:        https://github.com/powerline/fonts
+[zgen]:                 https://github.com/tarjoilija/zgen
