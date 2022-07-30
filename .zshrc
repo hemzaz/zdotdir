@@ -20,11 +20,18 @@ ZSH_THEME=refined
 
 # plugins
 plugins=(
-  autosuggestions
+  xdg
   zsh-defer
-  magic-enter
+  zsh-bench
+  dash
+  extract
+  fancy-ctrl-z
   git
+  macos
+  magic-enter
+  zfunctions
   z
+  autosuggestions
   fast-syntax-highlighting
   history-substring-search
 )
@@ -36,6 +43,7 @@ plugins=(
   git clone git@github.com:mattmc3/zsh_custom $ZSH_CUSTOM
 
 # init zsh_custom
+#export ZSH_CUSTOM=~/Projects/mattmc3/zsh_custom
 fpath+=$ZSH_CUSTOM/functions
 autoload -Uz custominit && custominit
 
