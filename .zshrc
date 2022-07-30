@@ -54,23 +54,22 @@ ZSH_THEME="robbyrussell"
 # much, much faster.
 # DISABLE_UNTRACKED_FILES_DIRTY="true"
 
-# Uncomment the following line if you want to change the command execution time
-# stamp shown in the history command output.
-# You can set one of the optional three formats:
-# "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
-# or set a custom format using the strftime function format specifications,
-# see 'man strftime' for details.
-# HIST_STAMPS="mm/dd/yyyy"
+HIST_STAMPS="yyyy-mm-dd"
 
-# Would you like to use another custom folder than $ZSH/custom?
-# ZSH_CUSTOM=/path/to/new-custom-folder
+ZSH_CUSTOM=${ZDOTDIR:-$HOME}/custom
+[[ -d $ZSH_CUSTOM ]] || \
+  git clone git@github.com:mattmc3/zsh_custom $ZSH_CUSTOM/plugins
+source $ZSH_CUSTOM/plugins/zsh_custom.zsh
 
-# Which plugins would you like to load?
-# Standard plugins can be found in $ZSH/plugins/
-# Custom plugins may be added to $ZSH_CUSTOM/plugins/
-# Example format: plugins=(rails git textmate ruby lighthouse)
-# Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
+plugins=(
+  autosuggestions
+  zsh-defer
+  magic-enter
+  git
+  z
+  fast-syntax-highlighting
+  history-substring-search
+)
 
 source $ZSH/oh-my-zsh.sh
 
