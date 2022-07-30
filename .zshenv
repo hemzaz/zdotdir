@@ -14,6 +14,7 @@ if [[ "$OSTYPE" == darwin* ]]; then
   export XDG_MUSIC_DIR=~/Music
   export XDG_PICTURES_DIR=~/Pictures
   export XDG_VIDEOS_DIR=~/Videos
+  export XDG_PROJECTS_DIR=~/Projects
 fi
 
 [[ -d ~/.config/dotfiles ]] && export DOTFILES=~/.config/dotfiles
