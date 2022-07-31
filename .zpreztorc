@@ -9,7 +9,7 @@
 zstyle ':prezto:*:*' color 'yes'
 
 # Add additional directories to load prezto modules from
-zstyle ':prezto:load' pmodule-dirs $ZDOTDIR/.zprezto-contrib
+zstyle ':prezto:load' pmodule-dirs $ZDOTDIR/plugins
 # zstyle ':prezto:load' pmodule-dirs $ZDOTDIR/.zplugins
 
 # Allow module overrides when pmodule-dirs causes module name collisions
@@ -23,82 +23,33 @@ zstyle ':prezto:load' pmodule-allow-overrides 'yes'
 
 # Set the Prezto modules to load (browse modules).
 # The order matters.
-zstyle ':omz:load' plugins \
-  'extract' \
-  'lib/clipboard' \
-  'copydir' \
-  'copybuffer' \
-  'copyfile' \
-  'macos' \
-  'magic-enter'
-
 prezto_modules=(
-  # initial
-  contribs
-  prezto-patches
+  # my plugins
+  zfunctions
+  xdg
+  magic-enter
+  z
+  zsh-bench
+  fast-syntax-highlighting
 
-  # zprezto built-ins
+  # zprezto addons
   autosuggestions
+  osx
+  git
+
+  # zprezto default list
   environment
   terminal
   editor
+  history
   directory
   spectrum
   utility
+  completion
   history-substring-search
   prompt
-
-  # my zprezto-contribs
-  xdg-basedirs
-  abbreviations
-  aliases
-  colored-man-pages
-  curl
-  dotfiles
-  emacs
-  git
-  golang
-  gpg
-  groovy
-  history
-  homebrew
-  iwd
-  java
-  jupyter
-  less
-  lpass
-  macos
-  node
-  nuget
-  prj
-  python
-  readline
-  ruby
-  rust
-  shell-safe-rm
-  string
-  tmux
-  todo-txt
-  wget
-  zfunctions
-  zsh-bench
-  zopts
-
-  # 3rd party plugin/contribs
-  up.zsh
-  zsh-tailf
-  zsh-fzf-history-search
-  z
-  zman
-
-  # load these last
-  #pure
-  completion
-  ohmyzsh
-  fast-syntax-highlighting
 )
 zstyle ':prezto:load' pmodule $prezto_modules
-
 
 #
 # Autosuggestions

@@ -14,14 +14,10 @@
 foo.*
 
 # plugins
-.antibody/
-.antigen
-.zgen
-.zplugins
+.external/
+custom/
 .zplugins/
 .zsh_plugins.zsh
-plugins/
-zplugins/
 
 # frameworks
 .oh-my-zsh/

@@ -3,15 +3,14 @@
 alias zprofrc="ZPROFRC=1 zsh"
 
 # prezto
-ZCONTRIBDIR=$ZDOTDIR/.zprezto-contrib
+ZPLUGINDIR=$ZDOTDIR/.external
+ZCONTRIBDIR=$ZDOTDIR/contrib
 ZPREZTODIR=$ZDOTDIR/.zprezto
-[[ -d $ZCONTRIBDIR ]] ||
-  git clone git@github.com:mattmc3/prezto-contrib $ZCONTRIBDIR
 [[ -d $ZPREZTODIR ]] ||
-  git clone --depth 1 --quiet --recurse-submodules --shallow-submodules https://github.com/sorin-ionescu/prezto $ZPREZTODIR
+  git clone --depth 1 --recursive --shallow-submodules https://github.com/sorin-ionescu/prezto $ZPREZTODIR
 
-source $ZCONTRIBDIR/init.zsh
 source $ZPREZTODIR/init.zsh
+source $ZDOTDIR/.aliases
 
 # local settings
 [[ -f $ZDOTDIR/.zshrc.local ]] && . $ZDOTDIR/.zshrc.local

@@ -1,0 +1,16 @@
+#!/usr/bin/env zsh
+local repo plugin_name plugin_dir initfile initfiles
+ZPLUGINDIR=${ZPLUGINDIR:-${ZDOTDIR:-$HOME/.config/zsh}/plugins}
+for repo in $@; do
+  plugin_name=${repo:t}
+  plugin_dir=$ZPLUGINDIR/$plugin_name
+  initfile=$plugin_dir/$plugin_name.plugin.zsh
+  if [[ ! -d $plugin_dir ]]; then
+    echo "Cloning $repo..."
+    git clone --quiet --depth 1 --recursive --shallow-submodules https://github.com/$repo $plugin_dir
+    if [[ ! -e $initfile ]]; then
+      initfiles=($plugin_dir/*.plugin.{z,}sh(N) $plugin_dir/*.{z,}sh{-theme,}(N))
+      [[ ${#initfiles[@]} -gt 0 ]] && ln -sf "${initfiles[1]}" "$initfile"
+    fi
+  fi
+done
