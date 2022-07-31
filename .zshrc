@@ -3,7 +3,6 @@
 alias zprofrc="ZPROFRC=1 zsh"
 
 # prezto
-ZPLUGINDIR=$ZDOTDIR/.external
 ZCONTRIBDIR=$ZDOTDIR/contrib
 ZPREZTODIR=$ZDOTDIR/.zprezto
 [[ -d $ZPREZTODIR ]] ||
