@@ -13,23 +13,23 @@ zstyle ':omz:update' mode disabled
 HIST_STAMPS="yyyy-mm-dd"
 DISABLE_AUTO_UPDATE=true
 ZSH_DISABLE_COMPFIX=true
-ZSH_COMPDUMP=$ZDOTDIR/.zcompdump
+ZSH_COMPDUMP=${ZDOTDIR:-$HOME}/.zcompdump
+ZPLUGINDIR=${ZDOTDIR:-$HOME}/.zplugins
 
 # theme
 ZSH_THEME=refined
 
 # plugins
 plugins=(
+  zfunctions
   xdg
-  zsh-defer
   zsh-bench
   dash
   extract
   fancy-ctrl-z
-  git
+  omz-git
   macos
   magic-enter
-  zfunctions
   z
   autosuggestions
   fast-syntax-highlighting
@@ -39,19 +39,12 @@ plugins=(
 # clone if necessary
 [[ -d $ZSH ]] || \
   git clone https://github.com/ohmyzsh/ohmyzsh $ZSH
-[[ -d $ZSH_CUSTOM ]] || \
-  git clone git@github.com:mattmc3/zsh_custom $ZSH_CUSTOM
-
-# init zsh_custom
-#export ZSH_CUSTOM=~/Projects/mattmc3/zsh_custom
-fpath+=$ZSH_CUSTOM/functions
-autoload -Uz custominit && custominit
 
 # init oh-my-zsh
 source $ZSH/oh-my-zsh.sh
 
 # other
-source $ZDOTDIR/.aliases
+source ${ZDOTDIR:-$HOME}/.aliases
 
 # done profiling
 [[ ${ZPROFRC:-0} -eq 0 ]] || { unset ZPROFRC && zprof }
