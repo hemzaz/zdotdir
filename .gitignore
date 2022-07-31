@@ -6,4 +6,5 @@
 .external/
 .oh-my-zsh/
 .ohmyzsh/
-custom/
+.zplugins/
+.zprezto/
