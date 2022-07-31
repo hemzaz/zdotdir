@@ -1,0 +1,7 @@
+#!/usr/bin/env zsh
+
+function zsh-defer {
+  [[ -d $ZPLUGINDIR/zsh-defer ]] || plugin-clone romkatv/zsh-defer
+  source $ZPLUGINDIR/zsh-defer/zsh-defer.plugin.zsh
+  zsh-defer $@
+}
