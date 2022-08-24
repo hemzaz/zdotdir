@@ -1,5 +1,5 @@
-ZEPHYR_HOME=~/Projects/mattmc3/zephyr
-#ZEPHYR_HOME=${ZDOTDIR:-~}/.zephyr
+#ZEPHYR_HOME=~/Projects/mattmc3/zephyr
+ZEPHYR_HOME=${ZDOTDIR:-~}/.zephyr
 [[ -e $ZEPHYR_HOME ]] || {
   echo >&2 cloning zephyr...
   git clone --depth=1 --quiet --branch moar-pluginz-plz https://github.com/mattmc3/zephyr $ZEPHYR_HOME
@@ -27,6 +27,7 @@ zplugins=(
   z
   zsh-bench
   zfunctions
+  zman
 
   # deferred
   zsh-defer
