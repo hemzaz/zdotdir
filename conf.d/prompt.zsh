@@ -1,5 +1,8 @@
 prompt pure
 
+# set color
+zstyle ':prompt:pure:prompt:success' color green
+
 # show exit code on right
 precmd_pipestatus() {
   local exitcodes="${(j.|.)pipestatus}"
