@@ -1,0 +1,6 @@
+HISTFILE=${XDG_DATA_HOME:-~/.local/share}/zsh/history
+[[ -f $HISTFILE ]] || { mkdir -p ${HISTFILE:h} && touch $HISTFILE }
+HISTSIZE=10000  # session history
+SAVEHIST=10000  # saved history
+
+# vim: ft=zsh
