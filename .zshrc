@@ -35,14 +35,15 @@ plugin load --path:editor belak/zsh-utils
 plugin load --path:history belak/zsh-utils
 plugin load --path:prompt belak/zsh-utils
 plugin load --path:utility belak/zsh-utils
-plugin load --path:plugins/magic-enter ohmyzsh/ohmyzsh
 plugin load rupa/z
 plugin load mattmc3/zman
 plugin load mattmc3/zsh-safe-rm
 plugin load zshzoo/magic-enter
 plugin load zshzoo/macos
 #plugin load zshzoo/fancy-ctrl-z
+plugin load --path:plugins/fancy-ctrl-z ohmyzsh/ohmyzsh
 #plugin load zshzoo/extract
+plugin load --path:plugins/extract ohmyzsh/ohmyzsh
 plugin load olets/zsh-window-title
 plugin load zsh-users/zsh-autosuggestions
 plugin load zsh-users/zsh-history-substring-search
@@ -86,7 +87,7 @@ fi
 # show exit code on right
 precmd_pipestatus() {
   local exitcodes="${(j.|.)pipestatus}"
-  if [[ "$exitcodes" != "0" ]]; then
+  if [[ "$exitcodes" =~ "[1-9]" ]]; then
     RPROMPT="%F{$prompt_pure_colors[prompt:error]}[$exitcodes]%f"
   else
     RPROMPT=
@@ -97,6 +98,10 @@ add-zsh-hook precmd precmd_pipestatus
 # https://unix.stackexchange.com/questions/685666/zsh-how-do-i-remove-block-prefixes-when-writing-multi-line-statements-in-intera
 # use 2 space indent for each new level
 PS2='${${${(%):-%_}//[^ ]}// /  }    '
+
+## z
+_Z_DATA=${XDG_DATA_HOME:-~/.local/share}/z/data
+[[ -f $_Z_DATA ]] || { mkdir -p ${_Z_DATA:h} && touch $_Z_DATA }
 #endregion
 
 #region: options
