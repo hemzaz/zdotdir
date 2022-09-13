@@ -81,3 +81,11 @@ if [[ -n "$key_info" ]]; then
   unset keymap
 fi
 #endregion
+
+#region: completions
+compstyleinit zshzoo
+#endregion
+
+#region: prompt
+prompt pure
+#endregion
