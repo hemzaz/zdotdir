@@ -41,9 +41,9 @@ alias ping='ping -c 5'
 alias type='type -a'
 alias vi=vim
 if [[ "$OSTYPE" == darwin* ]]; then
-	alias ls="ls -G"
+  alias ls="ls -G"
 else
-	alias ls="ls --color=auto"
+  alias ls="ls --color=auto"
 fi
 alias grep="grep --color=auto --exclude-dir={CVS,.git,.hg,.svn}"
 
@@ -76,9 +76,9 @@ alias duf='du -sh *'
 
 # url encode/decode
 alias urldecode='python3 -c "import sys, urllib.parse as ul; \
-		print(ul.unquote_plus(sys.argv[1]))"'
+    print(ul.unquote_plus(sys.argv[1]))"'
 alias urlencode='python3 -c "import sys, urllib.parse as ul; \
-		print (ul.quote_plus(sys.argv[1]))"'
+    print (ul.quote_plus(sys.argv[1]))"'
 
 # history
 # list the ten most used commands
