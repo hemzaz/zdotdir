@@ -1,8 +1,6 @@
 ~*
 .antidote/
 .cache/
-custom/
-.custom/
 .external/
 .plugins/
 .zcompcache/
