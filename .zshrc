@@ -44,7 +44,6 @@ if [[ ! $ZDOTDIR/.zplugins.zsh -nt $ZDOTDIR/.zplugins ]]; then
 fi
 autoload -Uz $ANTIDOTE_DIR/functions/antidote
 source $ZDOTDIR/.zplugins.zsh
-antidote load
 
 # docker plugins
 zstyle ':completion:*:*:docker:*' option-stacking yes
@@ -59,8 +58,11 @@ source $ZDOTDIR/.zaliases
 [ -f ${ZDOTDIR:-$HOME}/.fzf.zsh ] &&
     source ${ZDOTDIR:-$HOME}/.fzf.zsh
 # load cheat-fzf
-[ -f ${ZDOTDIR:-$HOME}/plugins/cht-fzf.sh ] &&
-    source ${ZDOTDIR:-$HOME}/plugins/cht-fzf.sh
+[ -f ${ZDOTDIR:-$HOME}/plugins/cheat-fzf/cht-fzf.sh ] &&
+    source ${ZDOTDIR:-$HOME}/plugins/cheat-fzf/cht-fzf.sh
+# load k
+[ -f ${ZDOTDIR:-$HOME}/plugins/.external/supercrabtree/k/k.sh ] &&
+    source ${ZDOTDIR:-$HOME}/plugins/.external/supercrabtree/k/k.sh
 # local settings
 [[ ! -f $DOTFILES.local/zsh/zshrc_local.zsh ]] || source $DOTFILES.local/zsh/zshrc_local.zsh
 
