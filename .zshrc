@@ -41,7 +41,7 @@ if [[ ! $ZDOTDIR/.zplugins.zsh -nt $ZDOTDIR/.zplugins ]]; then
         git clone --depth=1 https://github.com/mattmc3/antidote.git $ANTIDOTE_DIR
     (
         source $ANTIDOTE_DIR/antidote.zsh
-        antidote bundle <$ZDOTDIR/.zplugins >$ZDOTDIR/.zplugins.zsh
+        antidote bundle <$ZDOTDIR/.zplugins.txt >$ZDOTDIR/.zplugins.zsh
     )
 fi
 autoload -Uz $ANTIDOTE_DIR/functions/antidote
