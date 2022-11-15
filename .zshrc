@@ -1,6 +1,7 @@
 # load envman
 [ -s "$HOME/.config/envman/load.sh" ] && source "$HOME/.config/envman/load.sh"
 
+# start shell profiler
 [[ ${ZPROFRC:-0} -eq 0 ]] ||
     zmodload zsh/zprof
 alias zprofrc="ZPROFRC=1 zsh"
