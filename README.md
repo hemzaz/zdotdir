@@ -6,7 +6,7 @@ ALL IN ONE, ZSH CONFIGURATION
 Install some Requirements and basic shell tools:  
 ```zsh
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"   
-brew install q jo yq curl tree tldr fzf mani ncurses xz p7zip pyenv nvm rpl readline git git-flow-avh starship  
+brew install q jo yq curl tree tldr fzf ncurses xz p7zip pyenv nvm rpl readline git git-flow-avh starship  
 curl -sS https://webi.sh/pathman | sh  
 ```  
 

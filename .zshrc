@@ -62,6 +62,12 @@ source $ZDOTDIR/.zaliases
 # load programming env
 source $ZDOTDIR/.zshlocal
 
+# load fzf
+[ -f ${ZDOTDIR:-$HOME}/.fzf.zsh ] &&
+    source ${ZDOTDIR:-$HOME}/.fzf.zsh
+# load cheat-fzf
+[ -f ${ZDOTDIR:-$HOME}/plugins/cht-fzf.sh ] &&
+    source ${ZDOTDIR:-$HOME}/plugins/cht-fzf.sh
 # local settings
 [[ ! -f $DOTFILES.local/zsh/zshrc_local.zsh ]] || source $DOTFILES.local/zsh/zshrc_local.zsh
 

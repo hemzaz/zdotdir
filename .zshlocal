@@ -1,7 +1,3 @@
-# load fzf
-[ -f ${HOME}/.fzf.zsh ] &&
-    source ${HOME}/.fzf.zsh
-
 source $(brew --prefix nvm)/nvm.sh
 source ${HOME}/.rvm/scripts/rvm
 
