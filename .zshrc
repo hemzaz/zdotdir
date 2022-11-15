@@ -50,7 +50,7 @@ if [[ -d ${ZDOTDIR:-$HOME}/.ohmyzsh ]]; then
     source ${ZDOTDIR:-$HOME}/.ohmyzsh/oh-my-zsh.sh &&
         export ZSH="${ZDOTDIR:-$HOME}/.ohmyzsh"
 else
-    OMZPLUGDIR=$(dirname $(find $PWD/plugins -type f -name "oh-my-zsh.sh"))
+    OMZPLUGDIR=$(dirname $(find $ZDOTDIR/plugins -type f -name "oh-my-zsh.sh"))
     ln -sf $OMZPLUGDIR $ZDOTDIR/.ohmyzsh
 fi
 
