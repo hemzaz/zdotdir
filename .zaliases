@@ -103,3 +103,6 @@ alias todos="$VISUAL $HOME/Desktop/todo.txt"
 if [[ "$OSTYPE" == darwin* ]]; then
   alias code="open -b com.microsoft.VSCode"
 fi
+
+#urlcurl
+alias lsweb='lynx --dump -listonly -nonumbers'

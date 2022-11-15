@@ -32,3 +32,6 @@ indent_size = 2
 [**/bin/*]
 indent_style = space
 indent_size = 2
+
+[*.zsh*]
+ignore = true

@@ -1,3 +1,23 @@
+# OMZSH plugins
+ohmyzsh/ohmyzsh path:plugins/colored-man-pages
+ohmyzsh/ohmyzsh path:plugins/colorize
+ohmyzsh/ohmyzsh path:plugins/golang
+ohmyzsh/ohmyzsh path:plugins/git-flow-avh
+ohmyzsh/ohmyzsh path:plugins/git-extras
+ohmyzsh/ohmyzsh path:plugins/nvm
+ohmyzsh/ohmyzsh path:plugins/npm
+ohmyzsh/ohmyzsh path:plugins/node
+ohmyzsh/ohmyzsh path:plugins/aws
+ohmyzsh/ohmyzsh path:plugins/vscode
+ohmyzsh/ohmyzsh path:plugins/sublime
+ohmyzsh/ohmyzsh path:plugins/urltools
+ohmyzsh/ohmyzsh path:plugins/pyenv
+ohmyzsh/ohmyzsh path:plugins/virtualenv
+ohmyzsh/ohmyzsh path:plugins/docker
+ohmyzsh/ohmyzsh path:plugins/docker-compose
+ohmyzsh/ohmyzsh path:plugins/ssh-agent
+
+## mattmc3
 # zephyr plugins
 mattmc3/zephyr path:plugins/autosuggestions
 mattmc3/zephyr path:plugins/directory
@@ -6,6 +26,12 @@ mattmc3/zephyr path:plugins/editor
 mattmc3/zephyr path:plugins/history
 mattmc3/zephyr path:plugins/utility
 mattmc3/zephyr path:plugins/zfunctions
+mattmc3/zephyr path:plugins/completions
+# additional
+mattmc3/zsh-safe-rm
+mattmc3/zsh-xdg-basedir
+mattmc3/zman
+
 
 # local plugins
 $ZDOTDIR/plugins/fancy-ctrl-z
@@ -23,25 +49,24 @@ $ZDOTDIR/plugins/prompt
 
 # general plugins
 zshzoo/macos
-zshzoo/magic-enter
-mattmc3/zsh-safe-rm
+chrissicool/zsh-256color
 olets/zsh-window-title
-mattmc3/zsh-xdg-basedir
-mattmc3/zman
-
-# deferred plugins
 olets/zsh-abbr kind:defer
-$ZDOTDIR/plugins/abbreviations
+akoenig/npm-run.plugin.zsh
+hlissner/zsh-autopair
+supercrabtree/k
+
+
+# zdharma
 zdharma-continuum/fast-syntax-highlighting kind:defer
+zdharma-continuum/zsh-select kind:defer
 
 # z
 rupa/z
 $ZDOTDIR/plugins/z
 
-### ^^^ ###
-
-# completions
-mattmc3/zephyr path:plugins/completions
-
 # history-substring-search
 zsh-users/zsh-history-substring-search
+
+# abbreviations
+$ZDOTDIR/plugins/abbreviations
