@@ -5,7 +5,6 @@
 export NVM_LAZY=1
 export NVM_AUTOLOAD=1
 export ZSH_COLORIZE_TOOL="chroma"
-export ZSH="${ZDOTDIR:-$HOME}/.ohmyzsh"
 export ZSH_CUSTOM=${ZDOTDIR:-$HOME}/custom
 export HYPHEN_INSENSITIVE="true"
 export ENABLE_CORRECTION="true"
@@ -14,8 +13,8 @@ export STARSHIP_CONFIG="${ZDOTDIR:-$HOME}/starship.toml"
 export ABBR_USER_ABBREVIATIONS_FILE="${ZDOTDIR}/.zabbr"
 
 # clone omzh if needed
-[[ -d $ZSH ]] ||
-    git clone https://github.com/ohmyzsh/ohmyzsh $ZSH
+# [[ -d $ZSH ]] ||
+#     git clone https://github.com/ohmyzsh/ohmyzsh $ZSH
 source $ZDOTDIR/.zshlocal
 #autoload completions
 autoload -Uz compinit
@@ -29,7 +28,7 @@ autoload -Uz $ZDOTDIR/functions/autoload-dir
 autoload-dir $ZDOTDIR/functions
 
 # config antidote
-ANTIDOTE_HOME=$ZDOTDIR/plugins/.external
+ANTIDOTE_HOME=$ZDOTDIR/plugins
 ANTIDOTE_DIR=$ZDOTDIR/.antidote
 
 zstyle ':antidote:bundle' use-friendly-names 'yes'
@@ -47,12 +46,20 @@ fi
 autoload -Uz $ANTIDOTE_DIR/functions/antidote
 source $ZDOTDIR/.zplugins.zsh
 
+if [[ -d ${ZDOTDIR:-$HOME}/.ohmyzsh ]]; then
+    source ${ZDOTDIR:-$HOME}/.ohmyzsh/oh-my-zsh.sh &&
+        export ZSH="${ZDOTDIR:-$HOME}/.ohmyzsh"
+else
+    OMZPLUGDIR=$(dirname $(find $PWD/plugins -type f -name "oh-my-zsh.sh"))
+    ln -sf $OMZPLUGDIR $ZDOTDIR/.ohmyzsh
+fi
+
 # docker plugins
 zstyle ':completion:*:*:docker:*' option-stacking yes
 zstyle ':completion:*:*:docker-*:*' option-stacking yes
 
 # load OMZH
-source $ZSH/oh-my-zsh.sh
+
 # load aliases
 source $ZDOTDIR/.zaliases
 
@@ -63,8 +70,8 @@ source $ZDOTDIR/.zaliases
 [ -f ${ZDOTDIR:-$HOME}/plugins/cheat-fzf/cht-fzf.sh ] &&
     source ${ZDOTDIR:-$HOME}/plugins/cheat-fzf/cht-fzf.sh
 # load k
-[ -f ${ZDOTDIR:-$HOME}/plugins/.external/supercrabtree/k/k.sh ] &&
-    source ${ZDOTDIR:-$HOME}/plugins/.external/supercrabtree/k/k.sh
+[ -f ${ZDOTDIR:-$HOME}/plugins/supercrabtree/k/k.sh ] &&
+    source ${ZDOTDIR:-$HOME}/plugins/supercrabtree/k/k.sh
 # local settings
 [[ ! -f $DOTFILES.local/zsh/zshrc_local.zsh ]] || source $DOTFILES.local/zsh/zshrc_local.zsh
 
