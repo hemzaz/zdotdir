@@ -11,6 +11,8 @@ export HYPHEN_INSENSITIVE="true"
 export ENABLE_CORRECTION="true"
 export COMPLETION_WAITING_DOTS="true"
 export STARSHIP_CONFIG="${ZDOTDIR:-$HOME}/starship.toml"
+export ABBR_USER_ABBREVIATIONS_FILE="${ZDOTDIR}/.zabbr"
+
 # clone omzh if needed
 [[ -d $ZSH ]] ||
     git clone https://github.com/ohmyzsh/ohmyzsh $ZSH
@@ -39,7 +41,7 @@ if [[ ! $ZDOTDIR/.zplugins.zsh -nt $ZDOTDIR/.zplugins ]]; then
         git clone --depth=1 https://github.com/mattmc3/antidote.git $ANTIDOTE_DIR
     (
         source $ANTIDOTE_DIR/antidote.zsh
-        envsubst <$ZDOTDIR/.zplugins | antidote bundle >$ZDOTDIR/.zplugins.zsh
+        antidote bundle <$ZDOTDIR/.zplugins >$ZDOTDIR/.zplugins.zsh
     )
 fi
 autoload -Uz $ANTIDOTE_DIR/functions/antidote
