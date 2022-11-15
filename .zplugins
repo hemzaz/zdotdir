@@ -42,11 +42,6 @@ $ZDOTDIR/plugins/lpass
 $ZDOTDIR/plugins/python
 $ZDOTDIR/plugins/string
 
-# prompt
-sindresorhus/pure     kind:fpath
-romkatv/powerlevel10k kind:fpath
-$ZDOTDIR/plugins/prompt
-
 # general plugins
 zshzoo/macos
 chrissicool/zsh-256color

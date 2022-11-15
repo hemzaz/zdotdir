@@ -19,7 +19,7 @@ export STARSHIP_CONFIG="${ZDOTDIR:-$HOME}/starship.toml"
 # clone omzh if needed
 [[ -d $ZSH ]] ||
     git clone https://github.com/ohmyzsh/ohmyzsh $ZSH
-
+source $ZDOTDIR/.zshlocal
 #autoload completions
 autoload -Uz compinit
 compinit
@@ -59,9 +59,6 @@ zstyle ':completion:*:*:docker-*:*' option-stacking yes
 source $ZSH/oh-my-zsh.sh
 # load aliases
 source $ZDOTDIR/.zaliases
-
-# load programming env
-source $ZDOTDIR/.zshlocal
 
 # load fzf
 [ -f ${ZDOTDIR:-$HOME}/.fzf.zsh ] &&
