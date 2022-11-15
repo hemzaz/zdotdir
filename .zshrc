@@ -1,11 +1,6 @@
 # load envman
 [ -s "$HOME/.config/envman/load.sh" ] && source "$HOME/.config/envman/load.sh"
 
-# start shell profiler
-[[ ${ZPROFRC:-0} -eq 0 ]] ||
-    zmodload zsh/zprof
-alias zprofrc="ZPROFRC=1 zsh"
-
 # set vars
 export NVM_LAZY=1
 export NVM_AUTOLOAD=1
@@ -71,7 +66,3 @@ source $ZDOTDIR/.zaliases
 
 # load starship
 eval "$(starship init zsh)"
-
-# done profiling
-[[ ${ZPROFRC:-0} -eq 0 ]] ||
-    unset ZPROFRC && zprof
