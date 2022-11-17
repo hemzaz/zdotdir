@@ -1,7 +1,3 @@
-#
-# .zprofile
-#
-
 export DOTFILES=~/.config/dotfiles
 
 # macOS
@@ -39,10 +35,16 @@ export PAGER='less'
 # use `< file` to quickly view the contents of any file.
 [[ -z "$READNULLCMD" ]] || READNULLCMD=$PAGER
 
-export TZ="America/New_York"
+export TZ="Asia/Jerusalem"
 export LANG="en_US.UTF-8"
 export LANGUAGE="en"
-export LC_ALL="en_US.UTF-8"
+export LC_COLLATE=en_US.UTF-8
+export LC_CTYPE=en_US.UTF-8
+export LC_MESSAGES=en_US.UTF-8
+export LC_MONETARY=en_US.UTF-8
+export LC_NUMERIC=en_US.UTF-8
+export LC_TIME=en_US.UTF-8
+export LC_ALL=en_US.UTF-8
 
 # Ensure path arrays do not contain duplicates
 typeset -gU cdpath fpath mailpath path

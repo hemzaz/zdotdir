@@ -4,14 +4,13 @@
 # set vars
 export NVM_LAZY=1
 export NVM_AUTOLOAD=1
+export ZLE_RPROMPT_INDENT=1
 export ZSH_COLORIZE_TOOL="chroma"
-export ZSH_CUSTOM=${ZDOTDIR:-$HOME}/custom
 export HYPHEN_INSENSITIVE="true"
 export ENABLE_CORRECTION="true"
 export COMPLETION_WAITING_DOTS="true"
 export STARSHIP_CONFIG="${ZDOTDIR:-$HOME}/starship.toml"
 export ABBR_USER_ABBREVIATIONS_FILE="${ZDOTDIR}/.zabbr"
-
 # clone omzh if needed
 # [[ -d $ZSH ]] ||
 #     git clone https://github.com/ohmyzsh/ohmyzsh $ZSH
@@ -46,19 +45,21 @@ fi
 autoload -Uz $ANTIDOTE_DIR/functions/antidote
 source $ZDOTDIR/.zplugins.zsh
 
+# load OMZH
 if [[ -d ${ZDOTDIR:-$HOME}/.ohmyzsh ]]; then
     source ${ZDOTDIR:-$HOME}/.ohmyzsh/oh-my-zsh.sh &&
-        export ZSH="${ZDOTDIR:-$HOME}/.ohmyzsh"
+        export ZSH="${ZDOTDIR:-$HOME}/.ohmyzsh" &&
+        export ZSH_CUSTOM=${ZSH}/custom
 else
     OMZPLUGDIR=$(dirname $(find $ZDOTDIR/plugins -type f -name "oh-my-zsh.sh"))
-    ln -sf $OMZPLUGDIR $ZDOTDIR/.ohmyzsh
+    ln -sf $OMZPLUGDIR $ZDOTDIR/.ohmyzsh &&
+        export ZSH="${ZDOTDIR:-$HOME}/.ohmyzsh" &&
+        export ZSH_CUSTOM=${ZSH}/custom
 fi
 
 # docker plugins
 zstyle ':completion:*:*:docker:*' option-stacking yes
 zstyle ':completion:*:*:docker-*:*' option-stacking yes
-
-# load OMZH
 
 # load aliases
 source $ZDOTDIR/.zaliases
@@ -74,6 +75,6 @@ source $ZDOTDIR/.zaliases
     source ${ZDOTDIR:-$HOME}/plugins/supercrabtree/k/k.sh
 # local settings
 [[ ! -f $DOTFILES.local/zsh/zshrc_local.zsh ]] || source $DOTFILES.local/zsh/zshrc_local.zsh
-
 # load starship
+antidote load
 eval "$(starship init zsh)"
