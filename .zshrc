@@ -64,12 +64,12 @@ zstyle ':completion:*:*:docker-*:*' option-stacking yes
 # load aliases
 source $ZDOTDIR/.zaliases
 
-# load fzf
-[ -f ${ZDOTDIR:-$HOME}/.fzf.zsh ] &&
-    source ${ZDOTDIR:-$HOME}/.fzf.zsh
-# load cheat-fzf
-[ -f ${ZDOTDIR:-$HOME}/plugins/cheat-fzf/cht-fzf.sh ] &&
-    source ${ZDOTDIR:-$HOME}/plugins/cheat-fzf/cht-fzf.sh
+# # load fzf
+# [ -f ${ZDOTDIR:-$HOME}/.fzf.zsh ] &&
+#     source ${ZDOTDIR:-$HOME}/.fzf.zsh
+# # load cheat-fzf
+# [ -f ${ZDOTDIR:-$HOME}/plugins/cheat-fzf/cht-fzf.sh ] &&
+#     source ${ZDOTDIR:-$HOME}/plugins/cheat-fzf/cht-fzf.sh
 # load k
 [ -f ${ZDOTDIR:-$HOME}/plugins/supercrabtree/k/k.sh ] &&
     source ${ZDOTDIR:-$HOME}/plugins/supercrabtree/k/k.sh

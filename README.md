@@ -4,11 +4,28 @@ ALL IN ONE, ZSH CONFIGURATION
 
 ## Installation
 Install some Requirements and basic shell tools:  
+osx:  
 ```zsh
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"   
 brew install q jo yq curl tree tldr fzf ncurses xz p7zip pyenv nvm rpl readline git git-flow-avh starship  
 curl -sS https://webi.sh/pathman | sh  
+```
+ubuntu:  
+```zsh
+#update system
+sudo apt update && sudo apt upgrade
+##install build essentials
+sudo apt install build-essential curl wget chroma
+###Install nerdfonts
+git clone https://github.com/ryanoasis/nerd-fonts
+cd nerd-fonts
+sudo ./install.sh
+###Install starship   
+curl -sS https://starship.rs/install.sh | sh. 
+###Install pathman. 
+curl -sS https://webi.sh/pathman | sh. 
 ```  
+
 
 It's a good idea to backup existing files first:
 
